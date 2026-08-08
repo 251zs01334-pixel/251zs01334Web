@@ -2,39 +2,46 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center; /* 横方向の中央揃え */
-  align-items: center;    /* 縦方向の中央揃え */
-  min-height: 100vh;      /* 画面いっぱいの高さ */
-  background-color: #f0f0f0;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  font-family: sans-serif;
 }
 
 .container {
-  /* 四角形を配置するコンテナ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
 
+/* 青い四角形のスタイル */
 .box {
-  width: 100px;           /* 四角形の幅 */
-  height: 100px;          /* 四角形の高さ */
-  background-color: #007bff; /* 青色（GitHub風の青） */
-  border-radius: 8px;     /* 少し角を丸くする（任意） */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 影をつける（任意） */
-
-  /* アニメーションの設定 */
-  animation: rotate-right 3s linear infinite;
-  /* 
-     rotate-right: 下で定義するアニメーション名
-     3s: 3秒で1回転
-     linear: 一定の速さで
-     infinite: 無限に繰り返す
-  */
+  width: 120px;
+  height: 120px;
+  background-color: #007bff; /* 青色 */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* 回転アニメーションの定義（キーフレーム） */
-@keyframes rotate-right {
-  from {
-    transform: rotate(0deg); /* 0度から開始 */
-  }
-  to {
-    transform: rotate(360deg); /* 360度（1回転）まで */
-  }
+/* ボタンのスタイル */
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #555;
 }
