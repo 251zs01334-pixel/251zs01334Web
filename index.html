@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>回転する青い四角形</title>
+  <title>JSで回転する青い四角形</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+
   <div class="container">
-    <!-- これが回転する四角形になります -->
-    <div class="box"></div>
+    <!-- 回転させる青い四角形 -->
+    <div id="blueBox" class="box"></div>
+
+    <!-- コントロール用ボタン -->
+    <div class="controls">
+      <button id="toggleBtn">ストップ</button>
+      <button id="speedUpBtn">スピードアップ</button>
+    </div>
   </div>
 
-  <!-- 今回はJavaScriptは使用しませんが、ファイルは空で残しておいても構いません -->
-  <!-- <script src="script.js"></script> -->
+  <script src="script.js"></script>
 </body>
 </html>
