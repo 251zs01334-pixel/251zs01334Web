@@ -1,16 +1,40 @@
 body {
-  font-family: sans-serif;
-  text-align: center;
-  padding-top: 50px;
-  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center;    /* 縦方向の中央揃え */
+  min-height: 100vh;      /* 画面いっぱいの高さ */
+  background-color: #f0f0f0;
 }
 
-h1 {
-  color: #333;
+.container {
+  /* 四角形を配置するコンテナ */
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+.box {
+  width: 100px;           /* 四角形の幅 */
+  height: 100px;          /* 四角形の高さ */
+  background-color: #007bff; /* 青色（GitHub風の青） */
+  border-radius: 8px;     /* 少し角を丸くする（任意） */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 影をつける（任意） */
+
+  /* アニメーションの設定 */
+  animation: rotate-right 3s linear infinite;
+  /* 
+     rotate-right: 下で定義するアニメーション名
+     3s: 3秒で1回転
+     linear: 一定の速さで
+     infinite: 無限に繰り返す
+  */
+}
+
+/* 回転アニメーションの定義（キーフレーム） */
+@keyframes rotate-right {
+  from {
+    transform: rotate(0deg); /* 0度から開始 */
+  }
+  to {
+    transform: rotate(360deg); /* 360度（1回転）まで */
+  }
 }
